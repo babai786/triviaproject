@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>TRIVIAPP</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1><b>TRIVIA APP</h1></b><br><br><br>
+        <a href="/form/" class ="btn btn-lg btn-primary">Play Game</a>
+         <a href="/summary/" class ="btn btn-lg btn-primary">Summary</a>
+    </div>
+
+</div>
+<h3>Last game result </h3>
+<h4> h11 {{qs.name}} </h4>
+
+<h3>Game played on</h3>
+<h4> {{qs.created_at}}</h4>
+<h3>Your Favourite cricketer</h3>
+<h4>{{qs.best_cricketer}}</h4>
+
+<h3>your answer to indian tricolour</h3>
+
+{% if qs.white != None %}
+ <h4>{{qs.white}}</h4>
+{% endif%}
+
+{% if qs.yellow != None %}
+ <h4>{{qs.yellow}}</h4>
+{% endif%}
+
+
+{% if qs.orange != None %}
+ <h4>{{qs.orange}}</h4>
+{% endif%}
+
+{% if qs.green != None %}
+ <h4>{{qs.green}}</h4>
+{% endif%}
+
+</body>
+</html>

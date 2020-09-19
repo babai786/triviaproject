@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <h1> SUMMARY OF GAMES </h1>
+    {%if qs %}
+    <table border="1" margin='auto'>
+      <thead>
+        <th>Name</th>
+        <th>Played on</th>
+        <th>Favourite Cricketer</th>
+        <th>Indian Tricolour</th>
+
+      </thead>
+      {% for q in qs %}
+      <tr>
+          <td>{{q.name}}</td>
+          <td>{{q.created_at}}</td>
+          <td>{{q.best_cricketer}}</td>
+          <td>{{q.white}}</td>
+          <td>{{q.yellow}}</td>
+          <td>{{q.orange}}</td>
+          <td>{{q.green}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>No Studetns found</p>
+  {% endif %}
+  </body>
+</html>
